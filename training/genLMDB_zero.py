@@ -122,7 +122,7 @@ def writelmdb(dataset, imageDir, lmdbPath, validation):
         for i in range(len(y_binary)):
             meta_data[clidx][i] = ord(y_binary[i])
         clidx += 1
-        visible = [1.0 for item in xrange(len(joints[::2]))]
+        visible = [0 for item in xrange(len(joints[::2]))]
         v_binary = float2bytes(visible)
         for i in range(len(v_binary)):
             meta_data[clidx][i] = ord(v_binary[i])
